@@ -1,0 +1,7 @@
+parameters:
+#    fantasygame_team.example.class: Fantasygame\TeamBundle\Example
+
+services:
+#    fantasygame_team.example:
+#        class: %fantasygame_team.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
