@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+{{ parent() }} Liczenie
+{% endblock %}
+
+{% block body %}
+
+
+<div style="font-size: 20px; color: #aacd4e; font-weight: bold; background-color: #AAAAAA;">
+{% for i in from..to %}
+{{ i }}
+<br />
+{% endfor %}
+</div>
+
+{% endblock %}
