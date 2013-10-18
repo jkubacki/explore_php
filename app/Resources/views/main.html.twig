@@ -1,0 +1,45 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
+<link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css" />
+{% endblock %}
+
+
+{% block title %}
+Let's Explore!
+{% endblock %}
+    
+
+
+{% block body %}
+    <div id="login">
+        {% block login %}
+        Login   /   Logout
+        {% endblock %}   
+    </div>
+    <div id="top">
+        {% block top %}
+        <img src="/explore/web/img/dragons-top2.png" />
+        {% endblock %}   
+    </div>
+    <div id="menu">
+        {% block menu %}
+        <ul>
+            <li>Kij z kupą</li>
+            <li>WOW pieseł</li>
+            <li>WTF?!</li>
+</ul>
+        {% endblock %}   
+    </div>
+    <div id="text">
+        {% block text %}
+        {% endblock %}   
+    </div>
+    <div id="footer">
+        {% block footer %}
+        Gogi & Kuba
+        {% endblock %}   
+    </div>
+        
+{% endblock %}
