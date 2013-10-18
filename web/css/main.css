@@ -1,0 +1,68 @@
+html, body {
+        background-image: url('/explore/web/img/bg-grey.png');
+	color: #000;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+#main {
+        width: 1200px;
+        margin: auto;
+}
+#login {
+	width: 1200px;
+        margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: right;
+        
+        color: #759e1a;
+        font-weight: bold;
+}
+#top {
+	width: 1200px;
+	text-align: center;
+        padding-left: 75px;
+}
+#menu {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: 20px;
+	width: 125px;
+	float: left;
+	overflow: hidden;
+	background-color: #444;
+        min-height: 500px;
+        color: #759e1a;
+        border-width: 2px;
+        border-style: groove;
+        border-color: #D3D3D3;
+}
+ul, ul li {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#text {
+        margin-top: 20px;
+	width: 1050px;
+	float: left;
+	overflow: hidden;
+	background-color: #D3D3D3;
+        min-height: 500px;
+}
+
+#footer {
+        margin-top: 20px;
+        height: 16px;
+        color: #759e1a;
+        font-size: 12px;
+        text-decoration: underline;
+        font-weight: bold;
+        margin-left: auto;
+	clear: both;
+	width: 1050px;
+        text-align: right;
+}
