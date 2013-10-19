@@ -46,7 +46,7 @@ class CampaignController extends Controller
 			));
 		}
 
-		return $this->render('FantasygameTeamBundle:Default:form.html.twig', array('form' => $form->createView()));
+		return $this->render('FantasygameTeamBundle:Campaign:edit.html.twig', array('form' => $form->createView()));
 	}
 
 	public function removeAction($id)
@@ -54,7 +54,8 @@ class CampaignController extends Controller
 		$em = $this->getDoctrine()->getEntityManager();
 		$campaign = $em->find('Fantasygame\TeamBundle\Entity\Campaign', $id);
 		$em->remove($campaign);
-		return new Response('usunięto');
+                $em->flush();
+		return $this->redirect($this->generateUrl("fantasygame_team_homepage"));
 	}
 
 }

@@ -20,12 +20,14 @@ Let's Explore!
     </div>
     <div id="top">
         {% block top %}
-        <img src="/explore/web/img/dragons-top2.png" />
+        <a href="{{ path('fantasygame_team_homepage') }}"><img src="/explore/web/img/dragons-top2.png" /></a>
         {% endblock %}   
     </div>
     <div id="menu">
         {% block menu %}
         <dl>
+            <dt>MENU</dt>
+            <dd><a href="{{ path('fantasygame_team_homepage') }}">Strona główna</a></dd>
             <dt>Losowanie</dt>
             <dd><a href="Spotkanie.html">Spotkanie</a></dd>
             <dd><a href="Skarby.html">Skarby</a></dd>

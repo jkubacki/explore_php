@@ -1,3 +1,10 @@
-{% for campaign in campaigns %}
-	{{ campaign.getName() }}<br/>
-{% endfor %}
+{% extends '::main.html.twig' %}
+
+{% block text %}
+    {% for campaign in campaigns %}
+        <a onclick="confirm('Na pewno?');" href="{{ path('fantasygame_campaign_remove', {'id': campaign.getId() }) }}">
+            <span style="color: red;">X</span>
+        </a>
+        <a href="{{ path('fantasygame_campaign_edit', {'id': campaign.getId() }) }}">{{ campaign.getName() }}</a><br/>
+    {% endfor %}
+{% endblock %}
