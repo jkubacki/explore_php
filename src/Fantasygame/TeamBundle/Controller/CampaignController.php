@@ -3,21 +3,19 @@
 namespace Fantasygame\TeamBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Fantasygame\TeamBundle\Entity\Campaign;
 use Symfony\Component\HttpFoundation\Response;
 use \Fantasygame\TeamBundle\Form\Type\CampaignType;
 
-class DefaultController extends Controller
+class CampaignController extends Controller
 {
-
 	public function indexAction()
 	{
-		$repository = $this->getDoctrine()->getRepository('Fantasygame\TeamBundle\Entity\CampaignRepository');
-		$repository->getAll();
-		return $this->render('FantasygameTeamBundle:Default:index.html.twig', array('name' => $name));
+		$repository = $this->getDoctrine()->getRepository('Fantasygame\TeamBundle\Entity\Campaign');
+		$campaigns = $repository->findAll();
+		return $this->render('FantasygameTeamBundle:Campaign:list.html.twig', array('campaigns' => $campaigns));
 	}
 
-	public function editCampaignAction($id)
+	public function editAction($id)
 	{
 		$em = $this->getDoctrine()->getEntityManager();
 		if (!$id) {
@@ -51,19 +49,12 @@ class DefaultController extends Controller
 		return $this->render('FantasygameTeamBundle:Default:form.html.twig', array('form' => $form->createView()));
 	}
 
-	public function addCampaignAction()
+	public function removeAction($id)
 	{
 		$em = $this->getDoctrine()->getEntityManager();
-		$sheet = $em->find('Fantasygame\TeamBundle\Entity\Sheet', 1);
-
-		$campaign = new Campaign();
-		$campaign->setName('Goverowo');
-		$campaign->setDescription('Kampania śmiechowa');
-		$campaign->addSheet($sheet);
-
-		$em->persist($campaign);
-		$em->flush();
-		return new Response('ok');
+		$campaign = $em->find('Fantasygame\TeamBundle\Entity\Campaign', $id);
+		$em->remove($campaign);
+		return new Response('usunięto');
 	}
 
 }

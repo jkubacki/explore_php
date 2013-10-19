@@ -1,0 +1,4 @@
+Fantasygame\TeamBundle\Entity\Campaing:
+    properties:
+        name:
+            - NotBlank: ~
