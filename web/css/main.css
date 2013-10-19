@@ -89,6 +89,7 @@ dl a:hover {
 	overflow: hidden;
 	background-color: white;
         min-height: 500px;
+        padding-top: 20px;
 }
 
 #footer {

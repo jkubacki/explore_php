@@ -3,7 +3,7 @@ fantasygame_team_homepage:
     defaults: { _controller: FantasygameTeamBundle:Campaign:index }
 fantasygame_campaign_edit:
     pattern:  /edit/{id}
-    defaults: { _controller: FantasygameTeamBundle:Campaign:editCampaign, id: 0 }
+    defaults: { _controller: FantasygameTeamBundle:Campaign:edit, id: 0 }
 fantasygame_campaign_remove:
     pattern:  /remove/{id}
-    defaults: { _controller: FantasygameTeamBundle:Campaign:removeCampaign}
+    defaults: { _controller: FantasygameTeamBundle:Campaign:remove}
