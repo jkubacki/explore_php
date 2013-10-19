@@ -1,9 +1,11 @@
 html, body {
         background-image: url('/explore/web/img/bg-grey.png');
-	color: #000;
+        background-color: #002F2F;
+        color: #27242B;
 	margin: 0;
 	padding: 0;
 	text-align: center;
+        font-family: monospace;
 }
 #main {
         width: 1200px;
@@ -16,53 +18,88 @@ html, body {
 	margin-right: auto;
 	text-align: right;
         
-        color: #759e1a;
+        color: #ABAB8E;
         font-weight: bold;
 }
 #top {
 	width: 1200px;
 	text-align: center;
-        padding-left: 75px;
+        /*padding-left: 75px;*/
 }
 #menu {
         margin-top: 20px;
         margin-left: auto;
         margin-right: 20px;
-	width: 125px;
+	width: 150px;
 	float: left;
 	overflow: hidden;
-	background-color: #444;
-        min-height: 500px;
-        color: #759e1a;
-        border-width: 2px;
-        border-style: groove;
-        border-color: #D3D3D3;
+	background-color: #ABAB8E;
+/*        min-height: 500px;*/
+        color: #27242B;
 }
-ul, ul li {
+dl, dt, dd {
 	display: block;
-	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
+dt {
+	width: 145px;
+	padding: 5px 10px;
+	font-weight: bold;
+	text-align: center;
+	background: #ABAB8E;
+	color: #27242B;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #dfe #365 #365 #dfe;
+}
+
+dd {
+	width: 150px;
+	padding-left: 10px;
+	background: #ABAB8E;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #dfe #365 #365 #dfe;
+        text-align: left;
+        color: #F2CA80;
+}
+
+dl a:link, dl a:visited {
+	display: block;
+	width: 145px;
+	text-decoration: none;
+	padding: 5px 10px;
+	font-weight: bold;
+	background: #D9D8BF url("/explore/web/img/tlo.png") repeat-x top;
+	color: #27242B;
+	border-left: 1px solid #797;
+}
+
+dl a:hover {
+	background-color: #5C504F;
+	color: white;
+}
+
 #text {
         margin-top: 20px;
-	width: 1050px;
+	width: 1025px;
 	float: left;
 	overflow: hidden;
-	background-color: #D3D3D3;
+	background-color: white;
         min-height: 500px;
 }
 
 #footer {
         margin-top: 20px;
         height: 16px;
-        color: #759e1a;
+        color: #ABAB8E;
         font-size: 12px;
-        text-decoration: underline;
         font-weight: bold;
         margin-left: auto;
 	clear: both;
 	width: 1050px;
         text-align: right;
+        padding-right: 10px;
 }
